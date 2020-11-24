@@ -47,7 +47,7 @@ Click on `Show code`, and then run it by clicking `Open`.
 This will run a sample AutoHotKey script that makes a box next to your mouse that shows the joysticks you have connected, the axes they have, and the current value of the axes.
 
 
-It looks like this once it's running:
+It looks like this once it's running (red underline added):
 
 ![Joystick Test Script running](/1-rudder-pedal-ptt-1-joystick-test.png)
 
