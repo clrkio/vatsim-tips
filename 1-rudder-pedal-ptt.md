@@ -77,20 +77,26 @@ Right toe brake | X | Not pressed: 100, Fully pressed: 0
 Rudder | Z | Full left: 0, Neutral: 50, Full right: 100
 
 
-### Step 6: Pick your keys
+### Step 6: Pick your pedal ranges
+ 
+For both axes, pick what range of values you want the key to be pressed during.
+For me, the toe brakes have a value of 0 when fully pressed, so I use 0-30 as the values that mean the PTT button should be pressed.
+Add that to your table.
 
-The script we will use has the ability to virtually "press" any key on your keyboard, and many not on your keyboard.
-Pick a key from the list of keys here to press for each side 
+Axis | Letter | Range | Activation Range
+-----|--------|-------|--------
+Left toe brake | Y | Not pressed: 100, Fully pressed: 0 | 0-30
+Right toe brake | X | Not pressed: 100, Fully pressed: 0 | 0-30
+Rudder | Z | Full left: 0, Neutral: 50, Full right: 100 | n/a
 
-
-### Step 6: Make a blank AutoHotKey script
+### Step 7: Make a blank AutoHotKey script
 
 Create a new AutoHotKey script on your Desktop (or wherever else you want it - remember that you have to start it every time you control). 
 Do this by right-clicking, selecting New, then selecting AutoHotKey Script. 
 This will make a new blank AutoHotKey script. 
 You can name it whatever you want.
 
-### Step 7: Edit the AutoHotKey script. 
+### Step 8: Copy the AutoHotKey script
 
 Right click on the icon for your new AutoHotKey script, then select `Open with`, then select `Notepad`.
 There will already be some lines in the script. Leave them there, and paste this after them: 
@@ -161,8 +167,25 @@ if (HoldingRight != HoldingRightPrev) {
 return
 ```
 
-You will have to change the values at the top to suit your preferences. 
-The LeftKey and RightKey variables set what key is "pushed" by AutoHotKey when the respective rudder pedal is pushed. For a list of key names, see https://www.autohotkey.com/docs/KeyList.htm
+### Step 9: Edit the AutoHotKey script - Keys
 
+AutoHotKey has the ability to virtually "press" any key on your keyboard, and many not on your keyboard.
+Pick a key from [this list](https://www.autohotkey.com/docs/KeyList.htm) to be pressed when the left and right pedals are pressed.
+Put the name of the key from the list on the right side of the equal sign next to the `LeftKey` and `RightKey` variables, where `Pause` and `ScrollLock` currently are.
 
+I use keys like Pause and Scroll Lock, which are on the keyboard, so I can use my keyboard if there is a problem, but don't do anything special or cause a character to be typed.
 
+### Step 10: Edit the AutoHotKey script - Joystick Axes
+
+Change the variables named `LeftJoystickAxis` and `RightJoystickAxis` if necessary. 
+Substitute your joystick number for the existing number `3`, and your joystick axis letters for the existing letters `X` and `Y`
+
+### Step 11: Edit the AutoHotKey script - Ranges
+
+Adjust the high and low ranges for each axis if necessary. If you want the button to be pressed when the joystick value is between 70 and 100, change `LeftPressedLow` to 70, and `LeftPressedHigh` to 100. Do the same for the right side.
+
+### Step 12: Run the script
+
+Make sure to save your changes to the AutoHotKey script.
+Then, find the icon for the script, and double-click it to run.
+Make sure Teamspeak and AudioForVatsim are configured to use the same Push to Talk keys as you made the script press.
