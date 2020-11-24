@@ -77,7 +77,12 @@ Right toe brake | X | Not pressed: 100, Fully pressed: 0
 Rudder | Z | Full left: 0, Neutral: 50, Full right: 100
 
 
-### Step 6: Pick your pedal ranges
+### Step 6: Exit the Joystick Test Script
+
+To exit the Joystick Test Script, go to the bottom right of your screen, and look for the AutoHotKey logo (a green box with a white H). If you don't see it, use the expand button on the hotkey bar to show more icons. Hovering shows you the name of the script. Right click, and select `Exit`.
+
+
+### Step 7: Pick your pedal ranges
  
 For both axes, pick what range of values you want the key to be pressed during.
 For me, the toe brakes have a value of 0 when fully pressed, so I use 0-30 as the values that mean the PTT button should be pressed.
@@ -89,14 +94,14 @@ Left toe brake | Y | Not pressed: 100, Fully pressed: 0 | 0-30
 Right toe brake | X | Not pressed: 100, Fully pressed: 0 | 0-30
 Rudder | Z | Full left: 0, Neutral: 50, Full right: 100 | n/a
 
-### Step 7: Make a blank AutoHotKey script
+### Step 8: Make a blank AutoHotKey script
 
 Create a new AutoHotKey script on your Desktop (or wherever else you want it - remember that you have to start it every time you control). 
 Do this by right-clicking, selecting New, then selecting AutoHotKey Script. 
 This will make a new blank AutoHotKey script. 
 You can name it whatever you want.
 
-### Step 8: Copy the AutoHotKey script
+### Step 9: Copy the AutoHotKey script
 
 Right click on the icon for your new AutoHotKey script, then select `Open with`, then select `Notepad`.
 There will already be some lines in the script. Leave them there, and paste this after them: 
@@ -167,7 +172,7 @@ if (HoldingRight != HoldingRightPrev) {
 return
 ```
 
-### Step 9: Edit the AutoHotKey script - Keys
+### Step 10: Edit the AutoHotKey script - Keys
 
 AutoHotKey has the ability to virtually "press" any key on your keyboard, and many not on your keyboard.
 Pick a key from [this list](https://www.autohotkey.com/docs/KeyList.htm) to be pressed when the left and right pedals are pressed.
@@ -175,16 +180,16 @@ Put the name of the key from the list on the right side of the equal sign next t
 
 I use keys like Pause and Scroll Lock, which are on the keyboard, so I can use my keyboard if there is a problem, but don't do anything special or cause a character to be typed.
 
-### Step 10: Edit the AutoHotKey script - Joystick Axes
+### Step 11: Edit the AutoHotKey script - Joystick Axes
 
 Change the variables named `LeftJoystickAxis` and `RightJoystickAxis` if necessary. 
 Substitute your joystick number for the existing number `3`, and your joystick axis letters for the existing letters `X` and `Y`
 
-### Step 11: Edit the AutoHotKey script - Ranges
+### Step 12: Edit the AutoHotKey script - Ranges
 
 Adjust the high and low ranges for each axis if necessary. If you want the button to be pressed when the joystick value is between 70 and 100, change `LeftPressedLow` to 70, and `LeftPressedHigh` to 100. Do the same for the right side.
 
-### Step 12: Run the script
+### Step 13: Run the script
 
 Make sure to save your changes to the AutoHotKey script.
 Then, find the icon for the script, and double-click it to run.
