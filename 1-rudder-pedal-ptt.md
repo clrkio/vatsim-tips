@@ -49,7 +49,7 @@ This will run a sample AutoHotKey script that makes a box next to your mouse tha
 
 It looks like this once it's running:
 
-// TODO(wclarke): insert image
+![Joystick Test Script running](/1-rudder-pedal-ptt-1-joystick-test.png)
 
 ### Step 4: Find your joystick number
 
@@ -81,6 +81,7 @@ Rudder | Z | Full left: 0, Neutral: 50, Full right: 100
 
 To exit the Joystick Test Script, go to the bottom right of your screen, and look for the AutoHotKey logo (a green box with a white H). If you don't see it, use the expand button on the hotkey bar to show more icons. Hovering shows you the name of the script. Right click, and select `Exit`.
 
+![Exiting Joystick Test Script](/1-rudder-pedal-ptt-2-exit-script.PNG)
 
 ### Step 7: Pick your pedal ranges
  
@@ -194,3 +195,5 @@ Adjust the high and low ranges for each axis if necessary. If you want the butto
 Make sure to save your changes to the AutoHotKey script.
 Then, find the icon for the script, and double-click it to run.
 Make sure Teamspeak and AudioForVatsim are configured to use the same Push to Talk keys as you made the script press.
+
+As a reminder, you have to start this script again each time your computer restarts.
